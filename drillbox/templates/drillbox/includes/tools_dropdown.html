@@ -1,0 +1,18 @@
+{% block content %}
+
+{% load static %}
+<script src="{% static 'js/dropdown_menu_change_title.js' %}"></script>   
+
+<div class="btn-group">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdown_tools" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Select Tool
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown_tool_select">
+    {% for tool in tools %}
+      <li><a href="#">{{ tool.name }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% endblock %}

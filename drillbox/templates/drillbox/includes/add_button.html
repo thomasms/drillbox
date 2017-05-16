@@ -1,15 +1,9 @@
 {% block content %}
 
 <div class="btn-group">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdown_tools" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Select Tool
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown_tool_select">
-    {% for field in form %}
-      <li><a href="#">{{ field.name }}</a></li>
-    {% endfor %}
-  </ul>
+<button type="button" class="btn btn-default" aria-label="Left Align">
+  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+</button>
 </div>
 
 {% endblock %}

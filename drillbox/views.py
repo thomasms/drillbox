@@ -1,10 +1,14 @@
 from django.shortcuts import render
-from drillbox.forms import ToolForm
-
+from drillbox.models import Tool
 
 def index(request):
-    form = ToolForm()
-    return render(request, 'drillbox/home.html', {'form': form})
+    tools = Tool.objects.all()
+
+    context = {
+        'tools':tools
+    }
+
+    return render(request, 'drillbox/home.html', context)
 
 
 def contact(request):
