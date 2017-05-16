@@ -21,12 +21,11 @@
 	   {% block content %}
 	   {% endblock %}	
 	</div>
-
-	<footer>
-		<div class="container-fluid" style='margin-left:15px'>
-		  <p>DrillBox is a product of Bare IT Ltd</p>
-		</div>
-	</footer>	
 </body>
 
+<footer>
+	<div class="container-fluid" style='margin-left:15px'>
+		<p>DrillBox is a product of Bare IT Ltd - <a href="{% url 'index' %}">Home</a> - <a href="{% url 'contact' %}">Contact</a></p>
+	</div>
+</footer>
 </html>
