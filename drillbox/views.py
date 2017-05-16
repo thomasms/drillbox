@@ -1,8 +1,12 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from drillbox.forms import ToolForm
+
 
 def index(request):
-    return render(request, 'drillbox/home.html')
+    form = ToolForm()
+    return render(request, 'drillbox/home.html', {'form': form})
+
 
 def contact(request):
     return render(request, 'drillbox/contact.html')
+
