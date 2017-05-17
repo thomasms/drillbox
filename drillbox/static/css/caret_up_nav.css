@@ -1,0 +1,4 @@
+.dropdown.open .caret{
+    border-top: none;
+    border-bottom: 4px solid #000000;
+}

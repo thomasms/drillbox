@@ -1,9 +1,17 @@
 {% block content %}
 
+
+<!-- include css styling to allow for up carot -->
 {% load static %}
-<script src="{% static 'js/dropdown_menu_change_title.js' %}"></script>   
+<link rel="stylesheet" href="{% static 'css/caret_up_nav.css' %}">
 
 <div class="btn-group">
+  <button id="btn_add" type="button" class="btn btn-default" aria-label="Left Align">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+  </button>
+</div>
+
+<div class="dropdown" id="tool_dropdown">
   <button class="btn btn-default dropdown-toggle" type="button" id="dropdown_tools" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Select Tool
     <span class="caret"></span>
@@ -14,5 +22,24 @@
     {% endfor %}
   </ul>
 </div>
+
+<!-- Need to fix this, since it wont work in external file, but works as script inline
+{% load static %}
+<script src="{% static 'js/dropdown_menu_change_title.js' %}"></script>
+-->
+
+<script>
+
+$(function(){
+    var dropdown_name = "#tool_dropdown"
+
+    $(dropdown_name).on('click', 'li a', function(){
+      $(dropdown_name + " .btn:first-child").html($(this).text() + ' <span class="caret"></span>');
+      $(dropdown_name + " .btn:first-child").val($(this).text());
+   });
+
+});
+</script>
+
 
 {% endblock %}
