@@ -2,9 +2,28 @@
 
 {% block content %}
     <div class="container-fluid" style="min-height:95%; ">
+
 	<div class="row">
 	  {% include "drillbox/includes/tools_dropdown.html" %}
 	  {% include "drillbox/includes/add_button.html" %}
 	</div>
-   </div>
+
+	<div class="row">
+	    <div class="col-md-6">
+
+  	<!-- Draggable and resizable javascript using Interact.js -->
+        {% load static %}
+	<script src="{% static 'js/draggable_resizable.js' %}"></script>
+  
+        <div id="draggable-canvas" class="draggable">
+            <canvas id="canvas_area"></canvas>
+            {% load static %}
+            <script src="{% static 'js/test_chart.js' %}"></script>
+        </div>
+
+    </div>
+  </div>
+
+</div>
+
 {% endblock %}

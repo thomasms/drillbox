@@ -18,6 +18,12 @@
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+	<!-- Include charting library -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
+
+	<!-- Draggable and resizable javascript using Interact.js -->
+	<script src="//cdn.jsdelivr.net/interact.js/1.2.6/interact.min.js"></script>
+
 
 	<style type="text/css">
 		html,
@@ -37,7 +43,7 @@
 
 <footer>
 	<div class="container-fluid" style='margin-left:15px'>
-		<p>DrillBox is a product of Bare IT Ltd - <a href="{% url 'index' %}">Home</a> - <a href="{% url 'contact' %}">Contact</a></p>
+		{% include "drillbox/includes/footer.html" %}
 	</div>
 </footer>
 
